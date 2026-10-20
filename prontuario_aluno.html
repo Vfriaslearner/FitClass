@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Class | Prontuário do Aluno</title>
+</head>
+<body>
+    <form>
+        
+      <h1>Prontuário do Aluno</h1>
+    <!--Vou colocar um input aqui,mas será para ser um selecionador de alunos.  Preciso ver como fazer isso-->
+       <input type="text" placeholder="Selecionar Aluno...  >" id="buscar-aluno ">
+    <!--Vou colocar um botão de busca aqui e saber como implementar o processamento -->
+     
+    
+     <h2>Medidas Corporais</h2>
+
+    <div class="metrics-grid">
+     <div class="metric-card">
+    <span class="number">50</span>
+    <span class="label">Kg</span>
+ </div>  
+
+<div class="metric-card">
+    <span class="number">170</span>
+    <span class="label">(cm)</span>
+    
+ </div>      
+</div>
+     <h2>Sinais Vitais (Bracelete) </h2>
+    <input type="text" placeholder="Frequência Cardíaca" id="freq-cardiaca">
+    <input type="text" placeholder="Pressão Arterial HGMG" id="pressao-arterial">
+     
+    <h2>Status do Aluno</h2>
+
+    <input type="text" placeholder="Selecione o Status Físico" id="buscar-status-aluno">
+
+    <h2>Objetivo</h2>
+
+    <textarea class="objetivo-aluno"
+    rows="5"
+    placeholder="Coloque o objetivo do aluno aqui"
+    maxlength="500"></textarea>
+
+    <button type="button" onclick="window.location.href='dashboard.html'">Voltar para Dashboard</button>
+
+  </form>
+</body>
+</html>

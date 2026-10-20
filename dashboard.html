@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dashboard| FitClass</title>
+</head>
+<body>
+
+<main class="dashboard-container">
+<!--Ao Copiar esse estilo,procurar saber depois como  substituir por uma lista funcional nas outras páginas onde for aplicada-->
+  <header class="dashboard-header"> 
+    <h1>Dashboard Coach</h1>
+
+    <!--Verificar Ponto  par aplicação do JavaScript nesta seta-->
+   <div class="campo-grupo">
+     <input 
+      type="text" 
+      id="prof" 
+      value="Olá, Vitor Pereira" 
+      class="input-read-only" 
+      readonly
+      >
+    </div>
+  </header>
+
+   <!--Verificar Ponto  par aplicação do JavaScript nesses cards abaixo-->
+  <section class="metrics-grid">
+     <div class="metric-card">
+      <span class="number">42</span>
+      <span class="label">Alunos Ativos</span>
+     </div>  
+
+     <div class="metric-card">
+      <span class="number">18</span>
+      <span class="label">Treinos</span>
+ 
+     </div>      
+  </section>
+<div class="dashboard-content-grid">
+ 
+    <section class="recent-section">
+        <br>
+      <h2>Alunos Recentes</h2>
+       <br>
+        <ul class="student-list">
+         <li class="student-item" onclick="window.location.href='prontuario_aluno.html'">
+          <span>Matheus Ferreira</span>
+          <span class="arrow">&gt;</span>
+        </li>
+
+        <li class="student-item" onclick="window.location.href='prontuario_aluno.html'">
+         <span>Tamiris Karla</span>
+         <span class="arrow">&gt;</span>
+        </li>  
+    
+        <li class="student-item" onclick="window.location.href='prontuario_aluno.html'">
+         <span>Aline Genthii</span>
+         <span class="arrow">&gt;</span>
+        </li>
+
+        </ul> 
+</section>
+<section class="action-section">
+    <br>
+    <h2>Ações Rápidas</h2>
+    <br>
+     <div class="action-buttons">
+        <button type="button" class="btn-action"  onclick="window.location.href='prontuario_aluno.html'">Prontuário de 
+            Alunos
+        </button>
+        <button type="button" class="btn-action">Cadastrar Novo Aluno(a)</button>
+    </div>
+</section>
+
+</main>
+    
+</body>
+</html>

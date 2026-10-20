@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Class| Cadastro de Alunos</title>
+</head>
+<body>
+    <form action="3.1Cadastro_aluno_sucesso.html" method="POST"> 
+    <h1>Cadastro de Alunos</h1>
+    <!-- Depois substituir o processar_cadastro.php pela notificação de aluno cadastrado com sucesso que vai ser criada. -->
+    
+
+        <input type="name" placeholder="Nome Completo" id="nome" >
+        <input type="datetime" placeholder="Data de Nascimento" id="Data de Nascimento" >   
+        
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <input type="number" step="0.1" placeholder="Peso (Kg)" id="Peso" >
+          </div>  
+
+        <div class="metric-card">
+           <input type="number" placeholder="Altura (cm)" id="Altura" >
+ 
+            </div>      
+        </div>
+
+        <input type="text" placeholder="Objetivo:" id="Objetivo" >
+        <input type="number" placeholder="Número para Contato" id="Número para Contato" >
+        <input type="email" placeholder="Email" id="Email" > 
+        
+        <button type="button" onclick="window.location.href='cadastro_aluno_sucesso.html'">Salvar Cadastro de Aluno</button>
+    </form>    
+    
+</body>
+</html>
