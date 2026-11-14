@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Class | Prontuário do Aluno</title>
+</head>
+   <body>
+    <main class="prontuario-container">
+
+       <nav class="top-carousel-nav">
+    <div class="nav-track">
+      <a href="dashboard.html" class="nav-item-active">Dashboard</a>
+      <a href="cadastro_alunos.html" class="nav-item">Cadastrar Aluno</a>
+      <a href="prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
+      <a href="monitoramento-aluno.html" class="nav-item">Monitoramento de Aluno</a>
+      <a href="prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
+      <a href="montagem-de-treino.html" class="nav-item">Montagem de Treino</a>
+    </div>
+  </nav>
+ 
+     <form class="prontuario-formulario">
+        
+      <h1 class="prontuario-titulo">Prontuário do Aluno</h1>
+    <!--Vou colocar um input aqui,mas será para ser um selecionador de alunos.  Preciso ver como fazer isso-->
+      <div class="field-group">   
+       <input type="text" placeholder="Selecionar Aluno...  >"id="buscar-aluno">
+       </div>
+
+    <!--Vou colocar um botão de busca aqui e saber como implementar o processamento -->
+     
+    <section class="form-section">
+      <h2 class="medidas-acima">Medidas Corporais</h2>
+        <div class="metrics-grid">
+         
+          <div class="metric-card">
+            <span class="number">50</span>
+            <span class="label">Kg</span>
+          </div>  
+      
+    
+          <div class="metric-card">
+            <span class="number">170</span>
+            <span class="label">(cm)</span>
+          </div> 
+        </div>
+
+     </section>
+    
+      <section class="form-section">
+           
+      <h2 class="sinais">Sinais Vitais (Bracelete) </h2>
+       <div class="input-group">
+        <input type="text" placeholder="Frequência Cardíaca" id="freq-cardiaca">
+        <input type="text" placeholder="Pressão Arterial HGMG" id="pressao-arterial">
+       </div>
+     </section>
+     
+     <section class="form-section">
+       
+      <h2 class="aluno-stats">Status do Aluno</h2>    
+        <input type="text" placeholder="Selecione o Status Físico" id="buscar-status-aluno">
+     </section> 
+      
+      <section class="form-section">     
+      <h2 class="objetivo">Objetivo</h2>
+      
+     <textarea class="objetivo-aluno"
+      rows="5"
+      placeholder="Coloque o objetivo do aluno aqui"
+      maxlength="500"></textarea>
+     </section>
+
+     <div class="button-actions-prontuario">
+    <button type="button" onclick="window.location.href='cadastro_alunos.html'" id="cadastro-novo-aluno">Cadastrar novo(a) Aluno(a)</button>
+    <button type="button" onclick="window.location.href='dashboard.html'" id="voltar-dashboard">Voltar para Dashboard</button>
+    </div>
+
+     </form>
+    </main>
+   </body>
+ </html>
+

@@ -4,12 +4,21 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Dashboard| FitClass</title>
+    <title> Dashboard | FitClass</title>
 </head>
 <body>
 
 <main class="dashboard-container">
-<!--Ao Copiar esse estilo,procurar saber depois como  substituir por uma lista funcional nas outras páginas onde for aplicada-->
+  <nav class="top-carousel-nav">
+    <div class="nav-track">
+      <a href="dashboard.html" class="nav-item-active">Dashboard</a>
+      <a href="cadastro_alunos.html" class="nav-item">Cadastrar Aluno</a>
+      <a href="prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
+      <a href="monitoramento-aluno.html" class="nav-item">Monitoramento de Aluno</a>
+      <a href="prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
+      <a href="montagem-de-treino.html" class="nav-item">Montagem de Treino</a>
+    </div>
+  </nav>
   <header class="dashboard-header"> 
     <h1>Dashboard Coach</h1>
 
@@ -70,7 +79,7 @@
         <button type="button" class="btn-action"  onclick="window.location.href='prontuario_aluno.html'">Prontuário de 
             Alunos
         </button>
-        <button type="button" class="btn-action">Cadastrar Novo Aluno(a)</button>
+        <button type="button" class="btn-action" onclick="window.location.href='cadastro_alunos.html'">Cadastrar Novo Aluno(a)</button>
     </div>
 </section>
 
