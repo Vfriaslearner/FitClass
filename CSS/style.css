@@ -274,8 +274,10 @@ display: flex;
 gap:12px;
 overflow-x: auto;
 padding: 0 16px;
+padding-bottom:4px;
 scrollbar-width: none;
 white-space: nowrap;
+
 
 }
 
@@ -303,6 +305,7 @@ white-space: nowrap;
   z-index: 1;
   box-sizing: border-box;
   transition: color 0.3s ease,border-color 0.3s ease;
+  flex-srhink:0;
   
 }
 
@@ -333,6 +336,54 @@ white-space: nowrap;
   z-index: -1;
   border-radius:18px;
 }
+
+.nav-item.btn-sair{
+
+  border-color:#fca5a5;
+  color:#dc2626;
+
+}
+
+.nav-item.nav-item.btn-sair:hover{
+
+  background-color:#fef2f2;
+  border-color:#dc2626;
+  color:#dc2626;
+}
+
+dialog#modal-sair,
+dialog.modal-fitclass {
+
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border:2px solid #2b49ab;
+  border-radius: 12px;
+  padding:24px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow:0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  text-align: center;
+  gap: 10px;
+
+}
+
+dialog#modal-sair::backdrop ,
+dialog.modal-fitness::backdrop {
+  
+  position: fixed;
+  background-color: rgba(15, 23, 42, 0.6);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+
 
 
 /*-------------------------------------------Tipografias gerais----------------------------------------------------------- */
@@ -417,7 +468,47 @@ resize:vertical;
 
 }
 
-/*----------------------------------------Cards e Listas (Dashboard)--------------------------------------------------------*/
+
+/*----------------------------------------------Perfil-------------------------------------------------------------------*/
+
+.perfil-container{
+
+  background-color: #fff;
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+  width:100%;
+  max-width: auto;
+  height: auto;
+  padding: 32px;
+  border-radius: 12px;
+  border:2px solid #2b49ab;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+}
+
+.foto-perfil{
+
+  display:flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.moldura{
+
+  width: 90px;
+  height:90px;
+  background-color: #2b49ab;
+  color:#fff;
+  border-radius: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+/*----------------------------------------Cards e Listas (Dashboard)-----------------------------------------------------*/
 
 
 
@@ -441,6 +532,7 @@ flex:1;
 background-color: #dce3e8; /*Passivo a mudança de cor - ver com o grupo */
 border: 1px solid #c2cbd3;
 border-radius: 12px;
+border: 2px solid #2b49ab;
 padding: 24px 20px;
 box-shadow:0 4px 10px rgba(0,0,0,0.03);
 text-align: center;
@@ -449,7 +541,9 @@ gap: 20px;
 
 } 
 
-
+#prof{
+  border: 2px solid #2b49ab;
+}
 
 .metric-card .number{
 
@@ -654,8 +748,8 @@ text-align: left;
   text-align: center;
   font-weight: bold;
   color: #000;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 
 }
 
@@ -812,7 +906,6 @@ color: #000;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 12px;
-  border:2px solid #2b49ab;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 
 }
@@ -874,9 +967,9 @@ color: #000;
 }
 
 
-.prontuario-titulo,.field-group{
-  margin-top:40px;
-  margin-bottom:40px;
+.field-group{
+  margin-top:30px;
+  margin-bottom:20px;
 
 }
 /* Os  cards dessa página foram copiados de dashboard-Para manutenção, ajustar em Dashboard ou trazer aqui com classe própria */

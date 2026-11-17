@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Dashboard | FitClass</title>
@@ -11,12 +11,14 @@
 <main class="dashboard-container">
   <nav class="top-carousel-nav">
     <div class="nav-track">
-      <a href="dashboard.html" class="nav-item-active">Dashboard</a>
-      <a href="cadastro_alunos.html" class="nav-item">Cadastrar Aluno</a>
-      <a href="prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
-      <a href="monitoramento-aluno.html" class="nav-item">Monitoramento de Aluno</a>
-      <a href="prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
-      <a href="montagem-de-treino.html" class="nav-item">Montagem de Treino</a>
+      <a href="../HTML/perfil.html" class="nav-item">Perfil</a>
+      <a href="../HTML/dashboard.html" class="nav-item-active">Dashboard</a>
+      <a href="../HTML/cadastro_alunos.html" class="nav-item">Cadastrar Aluno</a>
+      <a href="../HTML/prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
+      <a href="../HTML/monitoramento-aluno.html" class="nav-item">Monitoramento de Aluno</a>
+      <a href="../HTML/montagem-de-treino.html" class="nav-item">Montagem de Treino</a>
+
+      <a href="#" class="nav-item btn-sair" onclick="event.preventDefault(); document.getElementById('modal-sair').showModal();">Sair</a>
     </div>
   </nav>
   <header class="dashboard-header"> 
@@ -54,17 +56,17 @@
       <h2>Alunos Recentes</h2>
        <br>
         <ul class="student-list">
-         <li class="student-item" onclick="window.location.href='prontuario_aluno.html'">
+         <li class="student-item" onclick="window.location.href='../HTML/prontuario_aluno.html'">
           <span>Matheus Ferreira</span>
           <span class="arrow">&gt;</span>
         </li>
 
-        <li class="student-item" onclick="window.location.href='prontuario_aluno.html'">
+        <li class="student-item" onclick="window.location.href='../HTML/prontuario_aluno.html'">
          <span>Tamiris Karla</span>
          <span class="arrow">&gt;</span>
         </li>  
     
-        <li class="student-item" onclick="window.location.href='prontuario_aluno.html'">
+        <li class="student-item" onclick="window.location.href='../HTML/prontuario_aluno.html'">
          <span>Aline Genthii</span>
          <span class="arrow">&gt;</span>
         </li>
@@ -76,14 +78,24 @@
     <h2>Ações Rápidas</h2>
     <br>
      <div class="action-buttons">
-        <button type="button" class="btn-action"  onclick="window.location.href='prontuario_aluno.html'">Prontuário de 
+        <button type="button" class="btn-action"  onclick="window.location.href='../HTML/prontuario_aluno.html'">Prontuário de 
             Alunos
         </button>
-        <button type="button" class="btn-action" onclick="window.location.href='cadastro_alunos.html'">Cadastrar Novo Aluno(a)</button>
+        <button type="button" class="btn-action" onclick="window.location.href='../HTML/cadastro_alunos.html'">Cadastrar Novo Aluno(a)</button>
     </div>
 </section>
 
 </main>
+
+  <dialog id="modal-sair" style="border: none; border-radius: 12px; padding: 20px;box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+        <h3 style="margin-top:0; color:#1e293b;">Deseja Sair do Sistema ?</h3>
+        <p style="color: #64748b; font-size: 14px; ">Você precisará fazer login novamente.</p>
+        <div style="display:flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+          <button type="button" onclick="document.getElementById('modal-sair').close()" style="padding: 8px 16px; border-radius: 6px; border:1px solid #cbd5e1; background: #506d8a; cursor: pointer;">Cancelar</button>
+          <button type="button" onclick="window.location.href='../HTML/login.html'" style="padding: 8px 16px;border-radius:6px; border:none; background: #dc2626; color: white; font-weight: 600; cursor:pointer;">Sim,sair</button>
+        </div>
+      </dialog> 
+    
     
 </body>
 </html>

@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitClass | login</title>
 </head>
+
+<dialog id="modal-esqueceu-senha" class="modal-fitclass">
+    <h3 style="margin-top: 0; color: #1e293b; font-size: 18px;">Recuperar senha</h3>
+    <p style="color: #64748b; font-size: 14px;margin-top: 10px; margin-bottom: 16px;">Informe o e-mail cadastrado para enviarmos as instruções de recuperação.</p>
+  
+  
+    <div style="margin-bottom: 20px;">
+        <input type="email" id="email-recuperacao" placeholder="seuemail@exemplo.com" required style="width: 100%; padding: 10px 12px; border: 2px solid #2b49ab; border-radius: 8px; box-sizing: border-box; font-size: 14px;" >
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        
+        <button type="button" onclick="const campo = document.getElementById('email-recuperacao'); if(campo.reportValidity()) {document.getElementById('modal-esqueceu-senha').close(); document.getElementById('modal-email-enviado').showModal(); } " style="width: 100%; padding: 10px 16px; border-radius: 8px; border: none; background: #2b49ab; color: white; font-weight: 600; cursor: pointer;">Enviar senha por e-mail</button>
+        
+        
+        <a href="#" onclick="event.preventDefault(); document.getElementById('modal-esqueceu-senha').close();" style="color: #64748b; font-size: 15px; text-decoration: none;">Voltar ao login</a>
+    
+     
+      </div>
+</dialog>
+
+
+<dialog id="modal-email-enviado" class="modal-fitclass">
+    <h3 style="margin-top: 0; color: #0a0000; font-size: 18px;">E-mail enviado!</h3>
+    <p style="color: #64748b; font-size: 14px;margin-top: 10px; margin-bottom: 24px;">Cheque sua caixa de entrada (e a pasta de spam) para redefinir sua senha.</p>
+    
+    <div style="display: flex; justify-content: center;">
+        <a href="#" onclick="event.preventDefault(); document.getElementById('modal-email-enviado').close();" style="color: #2b49ab; font-size: 14px; font-weight: 600; text-decoration: none;">Voltar ao login</a>
+    </div>
+</dialog>
+
+
+
+
 <body> 
 
     <div class="login-box">
         
-      <form action="dashboard.html">
+      <form action="../HTML/dashboard.html">
         <h1 style="font-weight:bold; text-align: center;"> FITCLASS</h1>
          <p style="font-weight:bold ;"> Seu Treino,seus resultados</p>
          <br>
@@ -21,8 +55,10 @@
            <button type="submit"> Entrar</button>
         
 
-          <a class="linha-de-cima" href="esqueceu_senha.html">Esqueci Minha Senha</a>
-         <p> Não tem conta? <a class="linha-de-baixo" href="cadastro_professores.html">Cadastre-se</a></p>
+          <a href="#" style="color: #d41111; font-size: 14px; text-align: center; display: block;" onclick="event.preventDefault(); document.getElementById('modal-esqueceu-senha').showModal();">
+                Esqueceu a senha?
+            </a>
+         <p> Não tem conta? <a class="linha-de-baixo" href="../HTML/cadastro_professores.html">Cadastre-se</a></p>
     </form>
    </div> 
 </body>

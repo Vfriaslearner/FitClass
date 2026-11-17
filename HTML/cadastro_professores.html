@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitClass | Cadastro de Professores</title>
 </head>
+
+<dialog id="modal-salvar" class="modal-fitclass">
+       <h3 style="margin-top:0; color:#1e293b; font-size:18px;">Salvar Cadastro ?</h3>
+       <p style="color:#64748b; font-size:14px;margin-bottom:24px;"></p>
+
+       <div style="display:flex; gap:10px; justify-content:flex-end;">
+        <button type="button" onclick="document.getElementById('modal-salvar').close()" style="padding:8px 16px; border-radius:6px; border: 1px solid #cbd5e1; background:#f1f5f9; color:#506d8a; font-weight:600; cursor:pointer;  ">Cancelar</button>
+      
+        <button type="button" style="padding: 8px 16px; border-radius:6px; border:none;background: #2b49ab; color:white; font-weight:600; cursor:pointer;" onclick="document.getElementById('modal-salvar').close(); document.getElementById('modal-sucesso-salvar').showModal();">Confirmar</button> 
+       </div>
+    </dialog>   
+    
+    
+
+    <dialog id="modal-sucesso-salvar" class="modal-fitclass">
+    <h3 style="margin-top: 0; color: #000; font-size: 18px;">Tudo certo!</h3>
+    <p style="color: #64748b; font-size: 15px; margin-bottom: 24px;margin-top: 10px;">Infomações salvas!. Professor,cheque seu email.</p>
+    
+    <div style="display: flex; justify-content:center; margin-top: 20px;">
+      <a href="../HTML/login.html" style="padding: 8px 20px; border-radius: 6px; background: #2b49ab; color: white; font-weight: 600; text-decoration: none; font-size: 15px; display: inline-block;">Voltar à tela de login</a>
+   
+    </div>
+</dialog>
+
+
 <body>
     <div class="cad-profs">
-       <form action="notificacao_cadastro_sucesso.html" method="post">
+       <form>
          <h1>Cadastro de Professores</h1>
          <p>Bem vindo(a) ao time,professor(a)!<br> Por favor,entre com os dados necessários <br> para liberarmos seu acesso a plataforma<br> o mais  rápido possível </p>
     
@@ -18,7 +43,7 @@
        <input type="text" placeholder="CREF" id="CREF" >
        <input type="tel" placeholder="Número para Contato" id="Número para Contato" >
        <input type="text" placeholder="CPF" id="CPF" >
-       <button type="submit">Salvar Cadastro</button >
+       <button type="button" class="btn-primary" onclick="document.getElementById('modal-salvar').showModal()">Salvar Cadastro</button>
     </form>
     
     </div> 

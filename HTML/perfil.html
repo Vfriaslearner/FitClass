@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>FitClass | Perfil</title>
+</head>
+
+   <dialog id="modal-salvar" class="modal-fitclass">
+       <h3 style="margin-top:0; color:#1e293b; font-size:18px;">Salvar Alterações ?</h3>
+       <p style="color:#64748b; font-size:14px;margin-bottom:24px;"></p>
+
+       <div style="display:flex; gap:10px; justify-content:flex-end;">
+        <button type="button" onclick="document.getElementById('modal-salvar').close()" style="padding:8px 16px; border-radius:6px; border: 1px solid #cbd5e1; background:#f1f5f9; color:#506d8a; font-weight:600; cursor:pointer;  ">Cancelar</button>
+      
+        <button type="button" style="padding: 8px 16px; border-radius:6px; border:none;background: #2b49ab; color:white; font-weight:600; cursor:pointer;" onclick="document.getElementById('modal-salvar').close(); document.getElementById('modal-sucesso-salvar').showModal();">Confirmar</button> 
+       </div>
+    </dialog>   
+    
+    
+
+    <dialog id="modal-sucesso-salvar" class="modal-fitclass">
+    <h3 style="margin-top: 0; color: #000; font-size: 18px; margin-bottom: 10px;" >Tudo certo!</h3>
+    <p style="color: #64748b; font-size: 14px; margin-bottom: 24px;">As informações foram salvas com sucesso no cadastro.</p>
+    
+    <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <button type="button" onclick="document.getElementById('modal-sucesso-salvar').close()" style="padding: 8px 20px; border-radius: 6px; border: none; background: #2b49ab; color: white; font-weight: 600; cursor: pointer;">OK</button>
+    </div>
+</dialog>
+
+
+
+<body>
+
+    <main class="perfil-container">
+
+          <nav class="top-carousel-nav">
+            <div class="nav-track">
+              <a href="../HTML/perfil.html" class="nav-item-active">Perfil</a>
+              <a href="../HTML/dashboard.html" class="nav-item">Dashboard</a>
+              <a href="../HTML/cadastro_alunos.html" class="nav-item">Cadastrar Aluno</a>
+              <a href="../HTML/prontuario_aluno.html" class="nav-item">Prontuário de Aluno</a>
+              <a href="../HTML/monitoramento-aluno.html" class="nav-item">Monitoramento de Aluno</a>
+              <a href="../HTML/montagem-de-treino.html" class="nav-item">Montagem de Treino</a>
+
+              <a href="#" class="nav-item btn-sair" onclick="event.preventDefault(); document.getElementById('modal-sair').showModal();">Sair</a>
+            </div>
+         
+          </nav>
+
+          <h1 class="Perfil do Professor" style="margin-top: 30px; margin-bottom: 20px;">Perfil</h1>
+
+          <div class="foto-perfil">
+            <div class="moldura">
+              VP
+            </div>
+
+          </div>
+
+
+        <div class="input-field-wrapper">
+
+          <label for="nome-prof">Nome Completo</label>
+          <input type="text" id="nome-prof" class="form-control" value="Vitor Pereira Farias" readonly>
+
+        </div>  
+
+        <div class="input-field-wrapper">
+
+          <label for="email-prof">Email do Professor</label>
+          <input type="text" id="email-prof" class="form-control" value="vitor.farias@FitClass.com">
+          
+        </div>
+
+        <div class="input-field-wrapper">
+
+          <label for="especialidade">Especialidade</label>
+          <input type="text" id="especialidade" class="form-control" value="Musculação e Definição Física" >
+          
+        </div>
+
+        <div class="input-field-wrapper">
+
+          <label for="cref">Registro / CREF</label>
+          <input type="text" id="cref" class="form-control" value="123456-G/PE">
+          
+        </div>
+        
+        <button type="button" class="btn-action"  id="btn-editar"  onclick="ativarEdicao()">Editar Perfil</button>
+        <button type="button" class="btn-primary" onclick="document.getElementById('modal-salvar').showModal()">Salvar Alterações</button>
+       
+    </main>
+
+      <dialog id="modal-sair" style="border: none; border-radius: 12px; padding: 20px;box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+        <h3 style="margin-top:0; color:#1e293b;">Deseja Sair do Sistema ?</h3>
+        <p style="color: #64748b; font-size: 14px; ">Você precisará fazer login novamente.</p>
+        <div style="display:flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+          <button type="button" onclick="document.getElementById('modal-sair').close()" style="padding: 8px 16px; border-radius: 6px; border:1px solid #cbd5e1; background: #506d8a; cursor: pointer;">Cancelar</button>
+          <button type="button" onclick="window.location.href='../HTML/login.html'" style="padding: 8px 16px;border-radius:6px; border:none; background: #dc2626; color: white; font-weight: 600; cursor:pointer;">Sim,sair</button>
+        </div>
+      </dialog> 
+    
+</body>
+</html>
